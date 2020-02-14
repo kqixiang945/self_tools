@@ -5,6 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
+/**
+ * 判断一个文件的格式是windows 还是unix 还是mac
+ * 对应参考地址:
+ * https://stackoverflow.com/questions/3066511/how-to-determine-file-format-dos-unix-mac
+ * Unix 系统里，每行结尾只有“<换行>”，即“\n”；
+ * Windows系统里面，每行结尾是“<回车><换行>”，即“\r\n”；
+ * Mac系统里，每行结尾是“<回车>”，即“\r”。
+ */
 public class FileFormat {
     public enum FileType { WINDOWS, UNIX, MAC, UNKNOWN }
 
